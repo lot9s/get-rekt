@@ -395,7 +395,7 @@ window.onload = function() {
 
       // detect collisions between avatar and enemies
       if (game.physics.arcade.overlap(avatar, enemies[i])) {
-        if (wadCount > 0) {
+        if (wadCount > 0 && energy > 0) {
           // enemy defeat!
           enemy.kill();
           enemies.splice(i, 1);
